@@ -1,0 +1,15 @@
+block main-content
+  if (tweets.length)
+    if (!currentUser)
+      span If you want to create twitter please 
+      a(href="users/login") login
+    h1= tweets.user 
+    each tweet in tweets
+      include tweet
+  
+  else
+    h4.muted No tweets 
+      if(!currentUser)
+         a(href="users/login") First Login 
+         span then 
+      a(href="/tweet") create one

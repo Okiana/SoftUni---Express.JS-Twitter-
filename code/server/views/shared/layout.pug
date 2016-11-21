@@ -1,0 +1,39 @@
+doctype
+html
+  head
+    title Hello!
+    script(type="text/javascript", src="/js/jquery-2.0.3.min.js")
+    link(rel='stylesheet', href='/css/bootstrap-3.0.2/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/bootstrap-3.0.2/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+    script(type="text/javascript", src="/css/bootstrap-3.0.2/js/bootstrap.min.js")
+    script(type="text/javascript", src="/js/blog.js")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="/css/site.css" rel="stylesheet")
+  body
+    .container
+      .menu
+        ul.nav.nav-pills
+          li(class=(menu === 'index')?'active':'')
+            a(href="/") Home
+          li.delimiter
+          if (currentUser)
+             li
+               span= currentUser.username
+             li
+              a(href="/tweet") Create tweet
+             if (currentUser.roles === 'admin')
+                  li
+                  a(href="/admins/all") Add admins
+             li
+             form#logout-form(method="post" action="/users/logout")
+             a(href="javascript:document.getElementById('logout-form').submit()") Logout
+          else 
+            li
+              a(href="/users/register") Register
+            li
+              a(href="/users/login") Log In
+      if globalError
+            h3 #{globalError}
+      block main-content
+        

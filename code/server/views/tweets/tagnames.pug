@@ -1,0 +1,9 @@
+extends ../shared/layout
+block main-content
+  if (tweets.length)
+    span Searched Tag: #{tweets.searchedTag}
+    h1 Tweets:  
+    each tweet in tweets      
+      include tweet
+  else
+    h2 There are no tweets with that tag

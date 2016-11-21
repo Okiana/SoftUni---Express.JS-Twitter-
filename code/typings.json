@@ -1,0 +1,11 @@
+{
+  "globalDependencies": {
+    "body-parser": "registry:dt/body-parser#0.0.0+20160619023215",
+    "express": "registry:dt/express#4.0.0+20160708185218",
+    "mongodb": "registry:dt/mongodb#2.1.0+20160602142941",
+    "mongoose": "registry:dt/mongoose#4.5.9+20161010180758",
+    "node": "registry:dt/node#6.0.0+20161019125345",
+    "passport": "registry:dt/passport#0.2.0+20161013124703",
+    "pug": "registry:dt/pug#2.0.0-beta6+20160919072324"
+  }
+}

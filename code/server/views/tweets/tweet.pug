@@ -1,0 +1,25 @@
+tweet.tweet
+  p= tweet.message
+  .meta
+    span.muted= formatDate(tweet.createdAt)
+
+    if (tweet.user)
+      | &nbsp; - &nbsp;
+      span Author: &nbsp;
+      a(href="/profile/"+ tweet.user)=tweet.user
+        
+    if (tweet.tags)
+      | &nbsp; - &nbsp;
+      span Tags &nbsp;
+      each tag in tweet.tags.split(',')
+        i.muted.fa.fa-tag &nbsp;
+        a.tag(href="/tag/"+tag)= tag
+        | &nbsp;&nbsp;
+
+    if (tweet.likes)
+      | &nbsp; - &nbsp;
+      span Likes: &nbsp;
+
+    if (tweet.views)
+      | &nbsp; - &nbsp;
+      span Views: &nbsp;

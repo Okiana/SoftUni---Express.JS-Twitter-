@@ -1,0 +1,10 @@
+extends ../shared/layout
+block main-content
+  form(method="post" action="/tweet/create")
+    label(for="message") Message
+    br
+    textarea(name="message" id="message" maxlength=140)
+    br
+    input(type="submit" value="Submit tweet")
+    a.btn(href='/', title="cancel") Cancel
+    
