@@ -1,6 +1,5 @@
-# SoftUni-Express.JS-Twitter
-SoftUni Express.js course exam 
 #Express.js Exam – Let’s build Twitter
+SoftUni Express.js course exam 
 
 ##Exam rules:
 *	You have 8 hours – from 10:00 to 18:00
